@@ -1,9 +1,6 @@
 package com.study.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Data;
 
 @Entity
@@ -15,6 +12,7 @@ public class Lesson {
     private Long courseId;
     private String videoUrl;
     private String title;
+    @Lob
     private String description;
     private boolean isReview;
     

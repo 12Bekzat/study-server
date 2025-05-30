@@ -59,7 +59,7 @@ public class SecurityConfig {
                 .cors(cors -> {})
                 .authorizeHttpRequests(register -> {
                     register.requestMatchers("/api/login").permitAll();
-                    register.anyRequest().authenticated();
+                    register.anyRequest().permitAll();
                 })
                 .addFilterBefore(jwtRequestFilter, UsernamePasswordAuthenticationFilter.class)
                 .build();
